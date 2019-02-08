@@ -2,6 +2,6 @@ const initialState = {
     users: [],
   };
   
-  const testReducer = (state = initialState) => state;
+  const sampleReducer = (state = initialState) => state;
   
   export default sampleReducer;
