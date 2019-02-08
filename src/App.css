@@ -1,3 +1,107 @@
-/*
-CSS styling
-*/
+/* ------------------------------------------------------------------------
+   styles 
+----------------------------------------------------------------------------*/
+
+.App {
+    min-height: 100vh;
+    background: white;
+  }
+  
+  #main-footer {
+    border-top: #ffc107 3px solid;
+  }
+  
+  .navbar {
+    border-bottom: #ffc107 3px solid;
+  }
+  
+  .my-color {
+    color: #ffc107;
+  }
+  
+  /* ------------------------------------------------------
+   LANDING PAGE 
+  ---------------------------------------------------------*/
+  
+  
+  #featured-new-article {
+    padding-top: 40px;
+  }
+  #featured-edit-profile,
+  #profile {
+    padding-top: 40px;
+  }
+  #featured-new-article,
+  #articles {
+    padding-top: 100px;
+  }
+  
+  #featured-tags ul li a {
+    text-decoration: none;
+  }
+  
+  #featured-welcome {
+    background: none,
+    url(/src/images/fast\ food.jpg);
+    background-position: center center;
+    background-size: cover;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    color: #fff;
+    height: 100vh;
+  }
+ 
+  
+  .marg-lg-zeus {
+    margin-top: 150px;
+  
+  }
+  
+  
+  .margin-down {
+    margin-top: 20px;
+  }
+  
+  /* ------------------------------------------------------
+   REGISTER, LOGIN
+  ---------------------------------------------------------*/
+  
+  #register,
+  #login{
+    padding-top: 100px;
+  }
+  
+  .margin-top {
+    margin-top: -50px;
+  }
+  
+  .nav-tabs .nav-link.active {
+    background-color: inherit;
+  }
+  
+
+  
+  .submitButton {
+    margin-top: 0px;
+    color: white;
+    height: 30px;
+    margin-right: 15px;
+    border-width: 2px;
+    background-color: rgba(100, 100, 101, 0);
+    border-radius: 5px;
+  }
+  
+  
+  .form-row {
+    font-family: 'Helvetica', 'Arial', sans-serif;
+    font-size: 14px;
+  
+    border: 1px solid #d6d9dc;
+    border-radius: 3px;
+  
+    min-height: 200px;
+    margin-bottom: 10px;
+    width: 100%;
+    padding: 7px;
+    resize: none;
+  }
