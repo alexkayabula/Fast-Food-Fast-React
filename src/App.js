@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
 import { hot } from 'react-hot-loader';
-import './App.scss';
 import Landing from './components/layout/Landing';
 import { BrowserRouter as Router, Route} from 'react-router-dom';
 import { Switch } from 'react-router-dom';
