@@ -9,6 +9,7 @@ import NavBar from './components/layout/NavBar';
 import Footer from './components/layout/Footer';
 import Landing from './components/layout/Landing';
 import Register from './components/auth/Register';
+import Login from './components/auth/Login';
 import { ToastContainer } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 
@@ -25,6 +26,7 @@ export class App extends Component {
           <Switch>
             <Route exact path="/" component={Landing} />
             <Route exact path="/register" component={Register} />
+            <Route exact path="/login" component={Login} />
           </Switch>
           <Footer />
         </div>
