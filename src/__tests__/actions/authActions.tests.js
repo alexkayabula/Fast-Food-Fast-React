@@ -1,5 +1,6 @@
+/* eslint-disable jest/no-identical-title */
 /* eslint-disable jest/valid-expect-in-promise */
-import { registerUser } from '../../actions/authActions';
+import { registerUser} from '../../actions/authActions';
 import thunk from 'redux-thunk';
 import configureMockStore from 'redux-mock-store';
 import fetchMock from 'fetch-mock';
@@ -10,7 +11,7 @@ const mockStore = configureMockStore(middlewares);
 
 
 describe('registerUser() action', () => {
-  afterEach(() => fetchMock.restore());
+afterEach(() => fetchMock.restore());
 
   it('returns errors given incorrect data', () => {
     const API_HOST_URL = process.env.API_URL;
@@ -32,7 +33,7 @@ describe('registerUser() action', () => {
     const store = mockStore();
     const expectedActions = [
       {
-       
+      
         payload: {
           
             message: 'The username should only contain alphabetic characters'
