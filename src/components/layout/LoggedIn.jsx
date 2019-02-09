@@ -1,12 +1,13 @@
+/* eslint-disable react/jsx-no-duplicate-props */
 import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
-import LinksPopup from './LinksPopup';
+import Display from './Display';
 import { connect } from 'react-redux';
 import { logoutUser } from '../../actions/authActions';
 import { withRouter } from 'react-router-dom';
 
 
-export class LoggedInNavBar extends Component {
+export class LoggedIn extends Component {
   render() {
     return (
       <React.Fragment>
@@ -56,7 +57,7 @@ export class LoggedInNavBar extends Component {
             </div>
           </div>
         </nav>
-        <LinksPopup />
+        <Display />
       </React.Fragment>
     );
   }
@@ -65,4 +66,4 @@ export class LoggedInNavBar extends Component {
 export default connect(
   null,
   { logoutUser }
-)(withRouter(LoggedInNavBar));
+)(withRouter(LoggedIn));

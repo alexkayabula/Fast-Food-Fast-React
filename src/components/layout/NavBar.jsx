@@ -1,14 +1,14 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
-import LoggedOutNavBar from './LoggedOutNavBar';
-import LoggedInNavBar from './LoggedInNavBar';
+import LoggedOut from './LoggedOut';
+import LoggedIn from './LoggedIn';
 
 /**
  * Renders the navigation bar.
  */
 export class NavBar extends Component {
   render() {
-    return this.props.currentUser ? <LoggedInNavBar /> : <LoggedOutNavBar />;
+    return this.props.currentUser ? <LoggedIn /> : <LoggedOut />;
   }
 }
 

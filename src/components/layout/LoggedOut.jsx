@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom';
 /**
  * Renders the navigation bar when a user is logged out.
  */
-class LoggedOutNavBar extends Component {
+class LoggedOut extends Component {
   render() {
     return (
       <nav className="navbar navbar-expand-sm navbar-dark bg-dark mb-5 fixed-top " >
@@ -24,14 +24,14 @@ class LoggedOutNavBar extends Component {
           <div className="collapse navbar-collapse" id="mobile-nav">
             <ul className="navbar-nav ml-auto">
               <li className="nav-item">
-                <Link to="/login" className="navbar-brand btn btn-outline-light">
+                <Link to="/login" className="navbar-brand btn btn-outline">
                   Sign in
                 </Link>
               </li>
               <li className="nav-item">
                 <Link
                   to="/register"
-                  className="navbar-brand btn btn-outline-light"
+                  className="navbar-brand btn btn-outline"
                 >
                   Sign up
                 </Link>
@@ -44,4 +44,4 @@ class LoggedOutNavBar extends Component {
   }
 }
 
-export default LoggedOutNavBar;
+export default LoggedOut;
