@@ -14,4 +14,3 @@ it('test rendering all menu', () => {
   const wrapper = shallow(<menu {...props} />);
   expect(wrapper).toMatchSnapshot();
 });
-
