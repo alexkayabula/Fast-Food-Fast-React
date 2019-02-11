@@ -1,5 +1,5 @@
 import { toast } from 'react-toastify';
-import {GET_ERRORS} from '../constants/ActionTypes';
+import {GET_ERRORS, GET_MY_ORDERS} from '../constants/ActionTypes';
 
 
 const API_HOST_URL = process.env.API_URL;
@@ -36,3 +36,28 @@ export const makeOrder = (userData, history) => dispatch => {
         }
       });
   };
+
+
+
+  export const getMyOrders = (url = undefined) => dispatch => {
+  
+      let path = url;
+      if (!path) {
+        path = `${API_HOST_URL}/v2/users/orders`;
+      }
+      return fetch(path, {
+        method: 'GET',
+        headers: {
+          'content-type': 'application/json',
+          authorization: `${token}`
+        }
+      })
+        .then(res => res.json())
+        .then(myorders => {
+          dispatch({
+            type: GET_MY_ORDERS,
+            payload: myorders
+          });
+        });
+    };
+    
