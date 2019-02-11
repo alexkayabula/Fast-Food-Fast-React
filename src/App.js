@@ -11,6 +11,7 @@ import Landing from './components/layout/Landing';
 import Register from './components/auth/Register';
 import Menu from './components/menu/menu';
 import Login from './components/auth/Login';
+import Order from './components/order/order';
 import { ToastContainer } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 
@@ -29,6 +30,7 @@ export class App extends Component {
             <Route exact path="/register" component={Register} />
             <Route exact path="/login" component={Login} />
             <Route exact path="/menu" component={Menu} />
+            <Route exact path="/order" component={Order} />
           </Switch>
           <Footer />
         </div>
