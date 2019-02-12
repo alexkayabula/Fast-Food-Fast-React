@@ -1,3 +1,4 @@
+/* eslint-disable jsx-a11y/alt-text */
 import { toast } from 'react-toastify';
 import {GET_ERRORS, GET_MY_ORDERS} from '../constants/ActionTypes';
 
