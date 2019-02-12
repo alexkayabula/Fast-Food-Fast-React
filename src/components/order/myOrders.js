@@ -1,3 +1,4 @@
+/* eslint-disable jsx-a11y/alt-text */
 /* eslint-disable react/jsx-key */
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
@@ -14,10 +15,9 @@ export class MyOrders extends Component {
   componentDidMount() {
     this.props.getMyOrders(`${API_HOST_URL}/users/orders`, this.props.history);
   }
-
+  
 
   render() {
-
     const postOrders = this.props.myorders.myorders.map(post => (
       <section key={post.orderId}id="dashboard-page" className="flex-grow-1">
         <section  className="mt-5 mb-2">
@@ -39,10 +39,10 @@ export class MyOrders extends Component {
       </section>
     ));
     return (
+      
       <div>
         {postOrders}
-        <div className="container d-flex flex-row justify-content-end mb-3">
-        </div>
+        <div className="container d-flex flex-row justify-content-end mb-3"></div>
       </div>
     );
   }

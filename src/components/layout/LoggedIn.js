@@ -37,7 +37,7 @@ export class LoggedIn extends Component {
                   </Link>
                 </li>
                 <li className="nav-item">
-                  <Link to="/order/history" className="nav-link" className="navbar-brand btn btn">
+                  <Link to="/order/history" onClick={() => window.location = '/order/history'} className="nav-link" className="navbar-brand btn btn">
                     ORDER HISTORY
                   </Link>
                 </li>
