@@ -68,7 +68,7 @@ export class Order extends Component {
                 </div>
                 <div className="form-group">
                   <input
-                    type="password"
+                    type="number"
                     className="form-control form-control-lg"
                     placeholder="Enter Quantity"
                     name="quantity"
@@ -76,7 +76,7 @@ export class Order extends Component {
                     onChange={this.onChange}
                   />
                   {quantityError && (
-                    <div className="invalid-feedback">{quatityError}</div>
+                    <div className="invalid-feedback">{quantityError}</div>
                   )}
                 </div>
                 <input

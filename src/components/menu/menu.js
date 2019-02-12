@@ -21,7 +21,7 @@ export class Menu extends Component {
 
   render() {
     const postItem = this.props.menu.menu.map(post => (
-      <section id="dashboard-page" className="flex-grow-1">
+      <section key={post.menu_id} id="dashboard-page" className="flex-grow-1">
         <section className="mt-5 mb-2">
           <div className="container">
             <div className="row">

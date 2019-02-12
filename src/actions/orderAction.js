@@ -39,7 +39,7 @@ export const makeOrder = (userData, history) => dispatch => {
 
 
 
-  export const getMyOrders = (url = undefined) => dispatch => {
+  export const getMyOrders = (url = undefined, history) => dispatch => {
   
       let path = url;
       if (!path) {
@@ -54,10 +54,16 @@ export const makeOrder = (userData, history) => dispatch => {
       })
         .then(res => res.json())
         .then(myorders => {
+          if(myorders.message !== "You have not made any orders"){
           dispatch({
             type: GET_MY_ORDERS,
             payload: myorders
           });
+          }
+          else{
+            history.push('/order');
+            toast.warning(myorders.message);
+          }
         });
     };
     
