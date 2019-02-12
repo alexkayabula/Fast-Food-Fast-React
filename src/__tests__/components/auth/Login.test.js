@@ -1,11 +1,8 @@
 /* eslint-disable jest/valid-expect */
 import React from 'react';
 import { shallow } from 'enzyme';
-import Enzyme from 'enzyme';
-import EnzymeAdapter from 'enzyme-adapter-react-16';
 import { Login } from '../../../components/auth/Login';
 
-Enzyme.configure({ adapter: new EnzymeAdapter() });
 
 describe('<Login/>', () => {
   it('should render without throwing an error', () => {

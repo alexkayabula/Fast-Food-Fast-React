@@ -2,7 +2,6 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import { getMyOrders } from '../../actions/orderAction';
-import { Link } from 'react-router-dom';
 import PropTypes from 'prop-types';
 
 
@@ -13,14 +12,14 @@ export class MyOrders extends Component {
   }
 
   componentDidMount() {
-    this.props.getMyOrders(`${API_HOST_URL}/users/orders`);
+    this.props.getMyOrders(`${API_HOST_URL}/users/orders`, this.props.history);
   }
 
 
   render() {
 
     const postOrders = this.props.myorders.myorders.map(post => (
-      <section id="dashboard-page" className="flex-grow-1">
+      <section key={post.orderId}id="dashboard-page" className="flex-grow-1">
         <section  className="mt-5 mb-2">
           <div className="container">
             <div className="row">
@@ -28,7 +27,6 @@ export class MyOrders extends Component {
                 <div className="card mb-3">
                   <div className="card-body">
                     <h5 className="card-title">Food:{post.item_name}</h5>
-                    <h5 className="card-title">Order Id:{post.orderId}</h5>
                     <h5 className="card-text">Quantity:{post.quantity}</h5>
                     <h5 className="card-title">Status:{post.status}</h5>
                     <h5 className="card-title">Username:{post.username}</h5>
